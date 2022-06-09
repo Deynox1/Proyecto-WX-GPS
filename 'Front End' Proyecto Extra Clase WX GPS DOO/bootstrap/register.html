@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.0">
+    <title>Register WXGPS</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="Stylesheet" href="css/main.css">
+
+    <style>
+
+        body{
+            background: #23b9ff;
+            background: linear-gradient(to right, #ffa751, #23b9ff);
+        }
+        .bg{
+            background-image: url(img/Card1.jpg);
+            background-position: center center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container w-75 bg-primary mt-5 rounded shadow">
+        <div class="row align-items-strecht">
+            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+                
+            </div>
+            <div class="col bg-white p-5 rounded-end">
+                <div class="text-end ">
+                    <img src="img/logo.png" width="48" alt="">
+                </div>
+                
+                <h2 class="fw-bold text-center py-5">Bienvenido al sistema de registro de WXGPS</h2>
+
+                <!--REGISTER-->
+
+                <form action="#">
+                    <div class="mb-4"> 
+                        <label for="identificacion" class="form-label">Numero de Identificación</label><br>
+                        <input type="identificacion" class="form-control" name="identificacion">
+                    </div>
+                    <div class="mb-4"><br>
+                        <label for="dispostivo" class="form-label">Numero del dispostivo</label><br>
+                        <input type="dispostivo" class="form-control" name="dispostivo"><br>
+                    </div>
+                    <div class="mb-4"><br>
+                        <label for="email" class="form-label">Correo Electrónico</label><br>
+                        <input type="email" class="form-control" name="email"><br>
+                    </div>
+                    <div class="mb-4"><br>
+                        <label for="celular" class="form-label">Numero de celular</label><br>
+                        <input type="celular" class="form-control" name="celular"><br>
+                    </div>
+                    <div class="d-grid"> <br>
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                    </div>
+                    <div class="my-3"> <br>
+                        <span>Ya tienes una cuenta? <a href="login.html">Iniciar Sesion</a></span> <br>
+                        <span><a href="#">Recuperar Contraseña</a></span><br><br>
+                    </div>
+                </form>
+
+                <!--Login con redes sociales-->
+                <div class="container w-100 my-5">
+                    <div class="row text-center">
+                        <div class="col-12">Resgistrate</div> <br>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-outline-primary w-100 my-1">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="Img/fblogo.png" width="32" alt="">
+                                    </div>
+
+                                    <div class="col-10 text-center">
+                                        Facebook
+                                    </div>
+
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-danger w-100 my-1">
+                                <div class="row align-items-center">
+                                    <div class="col-2">
+                                        <img src="Img/gmaillogo.png" width="32" alt="">
+                                    </div>
+
+                                    <div class="col-10 text-center">
+                                        Gmail
+                                    </div>
+
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
