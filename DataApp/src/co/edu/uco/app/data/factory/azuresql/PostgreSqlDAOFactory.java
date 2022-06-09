@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import co.edu.uco.app.crosscutting.exception.AppException;
-import co.edu.uco.app.crosscutting.exception.enumeration.ExceptionType;
 import co.edu.uco.app.data.dao.IdTypeDAO;
 import co.edu.uco.app.data.dao.CompanyDAO;
 import co.edu.uco.app.data.dao.DispositiveDAO;
@@ -45,7 +44,7 @@ public class PostgreSqlDAOFactory extends DAOFactory {
 	} catch (SQLException exception) {
 		throw AppException.buildTechnicalException("There was a problem trying to get the connection with sql server at jdbc:postgresql://localhost/wxgps");
 	} catch (Exception exception) {
-		throw AppException.buildTechnicalException("An unexpected problem has ocurred trying to get the connection with sql server at jdbc:sqlserver://academic-database-server.database.windows.net:1433;database=academic-db;user=academicDmlUser ");
+		throw AppException.buildTechnicalException("An unexpected problem has ocurred trying to get the connection with sql server at jdbc:postgresql://localhost/wxgps");
 	}
   }
 		
@@ -63,9 +62,9 @@ public class PostgreSqlDAOFactory extends DAOFactory {
 		try {
 			getConnection().close();
 		} catch (SQLException exception) {
-			throw AppException.buildTechnicalException("There was a problem trying to close the connection with sql server at jdbc:sqlserver://academic-database-server.database.windows.net:1433;database=academic-db;user=academicDmlUser ");
+			throw AppException.buildTechnicalException("There was a problem trying to close the connection with sql server at jdbc:postgresql://localhost/wxgps");
 		} catch (Exception exception) {
-			throw AppException.buildTechnicalException("An unexpected problem has ocurred trying to close the connection with sql server at jdbc:sqlserver://academic-database-server.database.windows.net:1433;database=academic-db;user=academicDmlUser ");
+			throw AppException.buildTechnicalException("An unexpected problem has ocurred trying to close the connection with sql server at jdbc:postgresql://localhost/wxgps");
 		}
 	}
 	
@@ -79,9 +78,9 @@ public class PostgreSqlDAOFactory extends DAOFactory {
 			}
 			getConnection().setAutoCommit(false);
 		} catch (SQLException exception) {
-			throw AppException.buildTechnicalException("There was a problem trying to init the connection with sql server at jdbc:sqlserver://academic-database-server.database.windows.net:1433;database=academic-db;user=academicDmlUser ");
+			throw AppException.buildTechnicalException("There was a problem trying to init the connection with sql server at jdbc:postgresql://localhost/wxgps");
 		} catch (Exception exception) {
-			throw AppException.buildTechnicalException("An unexpected problem has ocurred trying to init the connection with sql server at jdbc:sqlserver://academic-database-server.database.windows.net:1433;database=academic-db;user=academicDmlUser ");
+			throw AppException.buildTechnicalException("An unexpected problem has ocurred trying to init the connection with sql server at jdbc:postgresql://localhost/wxgps");
 		}
 	}
   
@@ -96,9 +95,9 @@ public class PostgreSqlDAOFactory extends DAOFactory {
 			}
 			getConnection().commit();
 		} catch (SQLException exception) {
-			throw AppException.buildTechnicalException("There was a problem trying to commit the connection with sql server at jdbc:sqlserver://academic-database-server.database.windows.net:1433;database=academic-db;user=academicDmlUser ");
+			throw AppException.buildTechnicalException("There was a problem trying to commit the connection with sql server at jdbc:postgresql://localhost/wxgps");
 		} catch (Exception exception) {
-			throw AppException.buildTechnicalException("An unexpected problem has ocurred trying to commit the connection with sql server at jdbc:sqlserver://academic-database-server.database.windows.net:1433;database=academic-db;user=academicDmlUser ");
+			throw AppException.buildTechnicalException("An unexpected problem has ocurred trying to commit the connection with sql server at jdbc:postgresql://localhost/wxgps");
 		}
 	}
 
@@ -113,9 +112,9 @@ public class PostgreSqlDAOFactory extends DAOFactory {
 			}
 			getConnection().rollback();
 		} catch (SQLException exception) {
-			throw AppException.buildTechnicalException("There was a problem trying to rollback the connection with sql server at jdbc:sqlserver://academic-database-server.database.windows.net:1433;database=academic-db;user=academicDmlUser ");
+			throw AppException.buildTechnicalException("There was a problem trying to rollback the connection with sql server at jdbc:postgresql://localhost/wxgps");
 		} catch (Exception exception) {
-			throw AppException.buildTechnicalException("An unexpected problem has ocurred trying to rollback the connection with sql server at jdbc:sqlserver://academic-database-server.database.windows.net:1433;database=academic-db;user=academicDmlUser ");
+			throw AppException.buildTechnicalException("An unexpected problem has ocurred trying to rollback the connection with sql server at jdbc:postgresql://localhost/wxgps");
 		}
 	}
 
