@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DE90C973-29B0-C543-0759-80194C4E8EAC" name="VehicleType">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 18:53:05 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="988297F9-25D3-9836-2615-679ADBF1D61F">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 18:56:54 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="type" id="B16593EF-5DAC-EEC2-DEEB-4332256152FD">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 18:56:54 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="380B66C2-EEF2-C2A1-BE19-2DA0796C6DC2" name="VehicleType_PK">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 18:56:54 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="988297F9-25D3-9836-2615-679ADBF1D61F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6B83C58F-B61C-A252-FA60-7C4F71DA9A1A" name="Vehicle">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 18:53:00 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="A031ED75-0DA5-0523-15A3-BDE1742341FB">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:00:13 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vehicle" id="D0F1EE05-7689-7914-0F93-45D31774C5B0">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:00:13 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VehicleType_id" id="FE3300D3-9D56-8BE2-ACB2-937318D5FC75">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:00:29 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C4708D9C-11BD-E7D7-9B69-A038ED5DB070" referredColumn="988297F9-25D3-9836-2615-679ADBF1D61F"/>
+</associations>
+</Column>
+<Column name="Dispositive_id" id="CD8F9772-2BD4-68C5-0024-33FA36F7D6DE">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:00:58 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1234A9D4-E53E-DCE8-E565-DC9D449AD242" referredColumn="7438C5E2-9196-85C3-53CA-9B8C4A6F26A6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C5836715-55AD-FB07-94DA-5E45F1C4196D" name="Vehicle_PK">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:00:13 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A031ED75-0DA5-0523-15A3-BDE1742341FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5197537-4C3B-F29B-7E32-65B064566D7B" name="Vehicle_VehicleType_FK">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:00:29 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE3300D3-9D56-8BE2-ACB2-937318D5FC75"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="946287C2-FCD3-DC90-49FB-09CCA158E84C" name="Vehicle_Dispositive_FK">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:00:58 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD8F9772-2BD4-68C5-0024-33FA36F7D6DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

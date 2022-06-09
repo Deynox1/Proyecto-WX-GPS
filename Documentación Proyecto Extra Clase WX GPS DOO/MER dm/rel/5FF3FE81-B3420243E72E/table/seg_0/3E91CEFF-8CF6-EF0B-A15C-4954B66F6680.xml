@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3E91CEFF-8CF6-EF0B-A15C-4954B66F6680" name="Dispositive">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 18:52:38 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="7438C5E2-9196-85C3-53CA-9B8C4A6F26A6">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 18:54:48 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="serialNumber" id="DC9368CA-4AD6-28CE-04DE-3F9FCDEAB019">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 18:59:06 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coordinates" id="8038B5AE-5E90-2AB8-5371-14E134CA4543">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 18:59:06 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A10BD781-2328-1614-DE79-7F544909508D" name="Dispositivo_PK">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 18:54:48 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7438C5E2-9196-85C3-53CA-9B8C4A6F26A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

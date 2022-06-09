@@ -1,0 +1,105 @@
+CREATE TABLE IF NOT EXISTS public.idtype
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    name character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT idtype_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.idtype
+    OWNER to postgres;
+
+CREATE TABLE IF NOT EXISTS public.dispositive
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    serialnumber character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    coordinates character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT dispositive_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.dispositive
+    OWNER to postgres;
+
+CREATE TABLE IF NOT EXISTS public.vehicletype
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    type character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT vehicletype_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.vehicletype
+    OWNER to postgres;
+
+CREATE TABLE IF NOT EXISTS public.vehicle
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    vehicle character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    vehicletype integer NOT NULL,
+    dispositive integer NOT NULL,
+    CONSTRAINT vehicle_pkey PRIMARY KEY (id),
+    CONSTRAINT vehicle_dispositive_fkey FOREIGN KEY (dispositive)
+        REFERENCES public.dispositive (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID,
+    CONSTRAINT vehicle_vehicletype_fkey FOREIGN KEY (vehicletype)
+        REFERENCES public.vehicletype (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.vehicle
+    OWNER to postgres;
+
+CREATE TABLE IF NOT EXISTS public.customer
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    idnumber character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    idtype integer NOT NULL,
+    name character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    location character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    dispositive integer NOT NULL,
+    CONSTRAINT customer_pkey PRIMARY KEY (id),
+    CONSTRAINT customer_dispositive_fkey FOREIGN KEY (dispositive)
+        REFERENCES public.dispositive (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID,
+    CONSTRAINT customer_idtype_fkey FOREIGN KEY (idtype)
+        REFERENCES public.idtype (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.customer
+    OWNER to postgres;
+
+CREATE TABLE IF NOT EXISTS public.company
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    name character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    location character varying(200) COLLATE pg_catalog."default" NOT NULL,
+    customer integer NOT NULL,
+    CONSTRAINT company_pkey PRIMARY KEY (id),
+    CONSTRAINT company_cliente_fkey FOREIGN KEY (customer)
+        REFERENCES public.customer (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.company
+    OWNER to postgres;

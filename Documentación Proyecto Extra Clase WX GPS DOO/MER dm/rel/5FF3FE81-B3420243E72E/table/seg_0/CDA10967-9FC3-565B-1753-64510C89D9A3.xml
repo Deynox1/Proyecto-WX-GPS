@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CDA10967-9FC3-565B-1753-64510C89D9A3" name="Company">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 18:52:46 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="420B8F74-81B0-7748-3AB3-C60926697484">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:03:40 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="0532A6A5-0BFA-1B89-F688-83BC82C64592">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:03:40 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="location" id="EC671433-7C56-B8CE-1D20-E8F7DEC65F5B">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:03:40 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Customer_id" id="CD97EA6B-79EE-5CBA-40EC-D1A23782C407">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:03:47 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="07185B91-F9CB-D205-E9F9-1226BBC18BC6" referredColumn="5483BCD3-80AA-7B9C-EE7E-AB76013A557B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ABC4E3BF-135A-DCF9-A9D8-DF3A2AE33E83" name="Company_PK">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:03:40 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="420B8F74-81B0-7748-3AB3-C60926697484"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2AA8BC89-6834-920A-D84C-231AA7A6AA92" name="Company_Customer_FK">
+<createdBy>Dey</createdBy>
+<createdTime>2022-06-09 19:03:47 UTC</createdTime>
+<ownerDesignName>MER dm</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD97EA6B-79EE-5CBA-40EC-D1A23782C407"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
